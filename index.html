@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tic Tac Toe - Unbeatable Bot</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- MENU UTAMA -->
+        <div id="menu">
+
+            <h1>Tic Tac Toe</h1>
+
+            <div class="menu-box">
+
+                <h2>Choose Menu</h2>
+
+                <button id="playerFirstBtn" class="menu-button">
+                    Player First
+                    <span>Player = X</span>
+                </button>
+
+                <button id="botFirstBtn" class="menu-button">
+                    Bot First
+                    <span>Bot = X</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- GAME -->
+        <div id="game" class="hidden">
+
+            <div class="game-header">
+
+                <div>
+                    <h1>Tic Tac Toe</h1>
+
+                    <p id="status">
+                        Your Turn
+                    </p>
+                </div>
+
+                <button id="backButton" class="back-button">
+                    Menu
+                </button>
+
+            </div>
+
+
+            <!-- PAPAN -->
+            <div id="board" class="board">
+
+                <button class="cell" data-index="0"></button>
+                <button class="cell" data-index="1"></button>
+                <button class="cell" data-index="2"></button>
+
+                <button class="cell" data-index="3"></button>
+                <button class="cell" data-index="4"></button>
+                <button class="cell" data-index="5"></button>
+
+                <button class="cell" data-index="6"></button>
+                <button class="cell" data-index="7"></button>
+                <button class="cell" data-index="8"></button>
+
+            </div>
+
+
+            <div id="result" class="result"></div>
+
+
+            <button id="restartButton" class="restart-button">
+                Play Again
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

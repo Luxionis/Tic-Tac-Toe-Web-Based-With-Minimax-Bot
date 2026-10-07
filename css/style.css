@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #141e30,
+        #243b55
+    );
+
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+#menu {
+    text-align: center;
+}
+
+#menu h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #cbd5e1;
+    margin-bottom: 35px;
+}
+
+.menu-box {
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    backdrop-filter: blur(10px);
+}
+
+.menu-box h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.menu-button {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    margin-bottom: 15px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.menu-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.menu-button span {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    font-weight: normal;
+
+    color: #dbeafe;
+}
+
+
+/* =========================
+   GAME HEADER
+========================= */
+
+.game-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.game-header h1 {
+    font-size: 32px;
+}
+
+#status {
+    margin-top: 6px;
+
+    color: #cbd5e1;
+
+    font-size: 15px;
+}
+
+.back-button {
+    border: 1px solid #64748b;
+
+    background: transparent;
+
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================
+   BOARD
+========================= */
+
+.board {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #f8fafc;
+
+    color: #0f172a;
+
+    font-size: 60px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.cell:hover:not(:disabled) {
+    background: #dbeafe;
+    transform: scale(0.97);
+}
+
+.cell:disabled {
+    cursor: default;
+}
+
+.cell.x {
+    color: #2563eb;
+}
+
+.cell.o {
+    color: #dc2626;
+}
+
+.cell.winner {
+    background: #22c55e;
+    color: white;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+    min-height: 30px;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   RESTART
+========================= */
+
+.restart-button {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 500px) {
+
+    #menu h1 {
+        font-size: 38px;
+    }
+
+    .cell {
+        font-size: 45px;
+    }
+
+    .game-header h1 {
+        font-size: 26px;
+    }
+}
